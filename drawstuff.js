@@ -525,6 +525,7 @@ function main() {
     var view = {eye:testEye, at:testAt, up:new Vector(0,1,0)};
 
     //polygon position for first image
+    //change the position of x,y coordinates and color value
     var poly = [{x:-5,y:0,z:10,c:new Color(0,0,0,255)}, {x:0,y:5,z:10,c:new Color(0,255,0,255)}, 
                 {x:5,y:0,z:10,c:new Color(255,0,0,255)}, {x:0,y:-5,z:10,c:new Color(0,0,255,255)}];
     
