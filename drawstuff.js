@@ -516,15 +516,22 @@ function main() {
     // define polygon and view
 
    //Test Eye vector for first image
-    //var testEye = new Vector(0, 0, 0);
+    var testEye = new Vector(0, 0, 0);
 
     //Test Eye vector for second image
-    var testEye = new Vector(-2, 2, 2);
+    //var testEye = new Vector(-2, 2, 2);
 
     var testAt = Vector.subtract(new Vector(0,0,10),testEye);
     var view = {eye:testEye, at:testAt, up:new Vector(0,1,0)};
-    var poly = [{x:-5,y:5,z:10,c:new Color(255,0,0,255)}, {x:5,y:5,z:10,c:new Color(0,255,0,255)}, 
-                {x:5,y:-5,z:10,c:new Color(0,0,0,255)}, {x:-5,y:-5,z:10,c:new Color(0,0,255,255)}];
+
+    //polygon position for first image
+    var poly = [{x:-5,y:0,z:10,c:new Color(0,0,0,255)}, {x:0,y:5,z:10,c:new Color(0,255,0,255)}, 
+                {x:5,y:0,z:10,c:new Color(255,0,0,255)}, {x:0,y:-5,z:10,c:new Color(0,0,255,255)}];
+    
+
+    //Polygon position for second image
+    //var poly = [{x:-5,y:5,z:10,c:new Color(255,0,0,255)}, {x:5,y:5,z:10,c:new Color(0,255,0,255)}, 
+      //          {x:5,y:-5,z:10,c:new Color(0,0,0,255)}, {x:-5,y:-5,z:10,c:new Color(0,0,255,255)}];
     
     // Define and render a rectangle in 2D with colors and coords at corners
     projectPoly(imagedata,poly,view);
